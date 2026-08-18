@@ -2,18 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Web VR 360 Video</title>
-    <!-- Nhúng thư viện A-Frame Web VR -->
+    <title>Web VR 360</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <!-- Link stream trực tiếp video 360 từ Google Drive -->
-        <video id="video360" src="https://lh3.googleusercontent.com/d/1wRoSVTZ3ASIQ4pwNAK4BoOUBg8ah_oV9" autoplay loop crossorigin="anonymous" playsinline></video>
+        <!-- Thay LINK_MP4_CHINH_XAC bằng link có đuôi .mp4 -->
+        <video id="video360" src="LINK_MP4_CHINH_XAC" autoplay loop crossorigin="anonymous" playsinline></video>
       </a-assets>
-
-      <!-- Khung cầu phát video 360 độ -->
+      
+      <!-- Fix lỗi S22 Ultra ở đây -->
+      <a-camera fov="80" position="0 0 0"></a-camera>
+      
       <a-videosphere src="#video360"></a-videosphere>
     </a-scene>
   </body>
