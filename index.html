@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web VR 360 Video</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!-- Thay MA_LINK_YOUTUBE bằng ID video YouTube của bạn -->
+        <iframe id="yt-video" src="https://www.youtube.com/embed/MA_LINK_YOUTUBE?enablejsapi=1&autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </a-assets>
+
+      <a-videosphere src="#yt-video"></a-videosphere>
+    </a-scene>
+  </body>
+</html>
