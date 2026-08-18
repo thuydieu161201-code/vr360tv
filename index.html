@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Web VR 360 Video</title>
+    <!-- Nhúng thư viện A-Frame Web VR -->
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <!-- Thay MA_LINK_YOUTUBE bằng ID video YouTube của bạn -->
-        <iframe id="yt-video" src="https://www.youtube.com/embed/MA_LINK_YOUTUBE?enablejsapi=1&autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <!-- Link stream trực tiếp video 360 từ Google Drive -->
+        <video id="video360" src="https://lh3.googleusercontent.com/d/1wRoSVTZ3ASIQ4pwNAK4BoOUBg8ah_oV9" autoplay loop crossorigin="anonymous" playsinline></video>
       </a-assets>
 
-      <a-videosphere src="#yt-video"></a-videosphere>
+      <!-- Khung cầu phát video 360 độ -->
+      <a-videosphere src="#video360"></a-videosphere>
     </a-scene>
   </body>
 </html>
